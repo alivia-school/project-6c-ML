@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="assets/fonts/Inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"/> 
+  <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"/> 
+  <link type="image/png" sizes="32x32" rel="icon" href="assets/imgs/favicon32.png">  
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css?v={{v}}" >  
+  <title>Анкетный опрос для проекта "Машинное обучение"</title>
+</head>
+<body>
+
+  <section class="form">
+    <div class="container">	
+	  <div class="group">  
+		<h2>Анкета ученика</h2>
+		<div class="paragraph">	
+			<p>Здравствуйте!</p><p>Мы пишем проект на тему "Машиноое обучение" и нам нужно собрать данные для обчения нейронной сети. Заполните пожалуйста следующую форому, это здорово нам поможет. Все передаваемые данные обезличены, мы не знаем и не сохраняем информацию о том кто конкрентно заполняет анкету</p><p>Спасибо!</p>
+		</div>
+		<form action="send" method="post">
+		
+		  <div class="group">
+			<select name="OutMarker" id="OutMarker" required>
+			  <option value="" disabled selected></option>
+			  <option value="2">2 - Плохо</option>
+			  <option value="3">3 - Удовлетворительно</option>
+			  <option value="4">4 - Хорошо</option>
+			  <option value="5">5 - Отлично</option>
+			</select>
+			<label for="OutMarker">Ваша успеваемость по математике</label>
+		  </div>
+
+		  <div class="group">
+			<select name="famsize" id="famsize" required>
+			  <option value="" disabled selected></option>
+			  <option value="LE3">Трое человек или менее</option>
+			  <option value="GT3">Более трех человек</option>
+			</select>
+			<label for="famsize">Размер семьи</label>
+		  </div>
+		  
+		  <div class="group">
+			<select name="Pstatus" id="Pstatus" required>
+			  <option value="" disabled selected></option>
+			  <option value="T">Живут вместе</option>
+			  <option value="A">Раздельно</option>
+			</select>
+			<label for="Pstatus">Родители живут вместе или отельно</label>
+		  </div>	
+		  
+		  <div class="group">
+			<select name="Medu" id="Medu" required>
+			  <option value="" disabled selected></option>
+			  <option value="0">Без образования</option>
+			  <option value="1">Начальная школа</option>
+			  <option value="2">9/11 классов</option>
+			  <option value="3">9/11 классов + Сред. проф. образование </option>
+			  <option value="4">Высшее образование</option>
+			</select>
+			<label for="Medu">Уровень образования матери</label>
+		  </div>
+		  
+		  <div class="group">
+			<select name="Fedu" id="Fedu" required>
+			  <option value="" disabled selected></option>
+			  <option value="0">Без образования</option>
+			  <option value="1">Начальная школа</option>
+			  <option value="2">9/11 классов</option>
+			  <option value="3">9/11 классов + Сред. проф. образование </option>
+			  <option value="4">Высшее образование</option>
+			</select>
+			<label for="Fedu">Уровень образования отца</label>
+		  </div>
+		  
+		  <div class="group">
+			<select name="Mjob" id="Mjob" required>
+			  <option value="" disabled selected></option>
+			  <option value="teacher">Сфера образования</option>
+			  <option value="health">Сфера здравоохраниеия</option>
+			  <option value="services">Военная/гос./гражданская служба</option>
+			  <option value="at_home">Домохозяйство</option>
+			  <option value="other">Другое</option>
+			</select>
+			<label for="Mjob">Тип работы матери</label>
+		  </div>	
+
+		  <div class="group">
+			<select name="Fjob" id="Fjob" required>
+			  <option value="" disabled selected></option>
+			  <option value="teacher">Сфера образования</option>
+			  <option value="health">Сфера здравоохраниеия</option>
+			  <option value="services">Военная/гос./гражданская служба</option>
+			  <option value="at_home">Домохозяйство</option>
+			  <option value="other">Другое</option>
+			</select>
+			<label for="Fjob">Тип работа отца</label>
+		  </div>	
+		  
+		  <div class="group">
+			<select name="guardian" id="guardian" required>
+			  <option value="" disabled selected></option>
+			  <option value="mother">Мама</option>
+			  <option value="father">Папа</option>
+			  <option value="other">Другой наставник</option>
+			</select>
+			<label for="guardian">Помагает в учебе (наставник)</label>
+		  </div>	  
+
+		  <div class="group">
+			<select name="studytime" id="studytime" required>
+			  <option value="" disabled selected></option>
+			  <option value="1">Менее 2 часов</option>
+			  <option value="2">От 2 до 5 часов</option>
+			  <option value="3">От 5 до 10 часов</option>
+			  <option value="4">Более 10 часов</option>
+			</select>
+			<label for="studytime">Занимаетесь математикой (часов в неделю)</label>
+		  </div>
+		  
+		  <div class="group">
+			<select name="schoolsup" id="schoolsup" required>
+			  <option value="" disabled selected></option>
+			  <option value="yes">Да</option>
+			  <option value="no">Нет</option>
+			</select>
+			<label for="schoolsup">Дополнительная образовательная поддержка</label>
+		  </div>
+		  
+		  <div class="group">
+			<select name="famsup" id="famsup" required>
+			  <option value="" disabled selected></option>
+			  <option value="yes">Да</option>
+			  <option value="no">Нет</option>
+			</select>
+			<label for="famsup">Помагают ли члены семьи Вам с математикой</label>
+		  </div>
+			  
+		  <div class="group">
+			<select name="paid" id="paid" required>
+			  <option value="" disabled selected></option>
+			  <option value="yes">Да</option>
+			  <option value="no">Нет</option>
+			</select>
+			<label for="paid">Доп. платные занятия по математике</label>
+		  </div>
+		  
+		  <div class="group">
+			<select name="activities" id="activities" required>
+			  <option value="" disabled selected></option>
+			  <option value="yes">Да</option>
+			  <option value="no">Нет</option>
+			</select>
+			<label for="activities">Учавствуете ли во внеклассные мероприятиях</label>
+		  </div>
+		  
+		  <div class="group">
+			<select name="nursery" id="nursery" required>
+			  <option value="" disabled selected></option>
+			  <option value="yes">Да</option>
+			  <option value="no">Нет</option>
+			</select>
+			<label for="nursery">Посещали ли до школы детский сад</label>
+		  </div>
+		  
+		  <div class="group">
+			<select name="higher" id="higher" required>
+			  <option value="" disabled selected></option>
+			  <option value="yes">Да</option>
+			  <option value="no">Нет</option>
+			</select>
+			<label for="higher">Планируете ли получать высшее образование</label>
+		  </div>     
+		  
+		  <div class="group">
+			<select name="internet" id="internet" required>
+			  <option value="" disabled selected></option>
+			  <option value="yes">Да</option>
+			  <option value="no">Нет</option>
+			</select>
+			<label for="internet">Есть ли дома доступ в интернет</label>
+		  </div> 
+		  
+		  <div class="group">
+			<select name="freetime" id="freetime" required>
+			  <option value="" disabled selected></option>
+			  <option value="1">Совсем нет</option>
+			  <option value="2">Есть немного</option>
+			  <option value="3">Бывает мало, бывает много</option>
+			  <option value="4">Много</option>
+			  <option value="5">Очень много</option>
+			</select>
+			<label for="freetime">Свободное время после школы</label>
+		  </div> 
+		  
+		  <div class="group">
+			<select name="health" id="health" required>
+			  <option value="" disabled selected></option>
+			  <option value="1">Очень плохое</option>
+			  <option value="2">Плохое</option>
+			  <option value="3">Среднее</option>
+			  <option value="4">Здоров(а), но есть малые нюансы</option>
+			  <option value="5">Полносью здоров(а), ничего не беспокоит</option>
+			</select>
+			<label for="health">Текущее состояние здоровья</label>
+		  </div> 
+
+		  <button class="button" type="submit">Отправить анкету</button>
+		</form>
+		<br><br>
+	  </div> 	
+	</div> 	
+  </section>
+  
+</body>
+</html>

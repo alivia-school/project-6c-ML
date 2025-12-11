@@ -1,80 +1,114 @@
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/Inter-cyrillic.woff2) format('woff2');
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/Inter-latin.woff2) format('woff2');
+}
 
 :root {
   --font-family: 'Inter', sans-serif;
+  --base-font-size: 17px;
 }
 
-body,
+body {
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);	
+  padding: 0px;
+  margin: 0px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
 input,
 select,
 button {	
   font-family: var(--font-family);
+  font-size: 100%;  
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-
-.form-container {
+.container {
   width: 100%;
   max-width: 700px;
+  min-height: calc(100vh);  
+  padding: 0 30px;
 }
 
+.paragraph {
+	padding-bottom: 2em;
+	text-align: justify;
+}
+.paragraph p {
+	text-indent: 20px;
+	margin-block-end: 0.4em;
+	margin-block-start: 0.4em;	
+}
+
+
 h2 {
+  font-size: 180%;	
   text-align: center;
   margin-bottom: 30px;
-  color: #333;
   font-weight: 600;
 }
 
-.form-group {
+
+.group {
   position: relative;
   margin-bottom: 30px;
 }
 
-.form-group input,
-.form-group select {
+form .group input,
+form .group select {
   width: 100%;
   padding: 14px 20px;
   border: 2px solid #e1e1e1;
   border-radius: 12px;
-  font-size: 16px;
   transition: all 0.3s ease;
   background: transparent;
   box-sizing: border-box;
 }
 
-.form-group input:focus,
-.form-group select:focus {
+form .group input:focus,
+form .group select:focus {
   outline: none;
   border-color: #667eea;
   box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
 }
 
-.form-group label {
+form .group label {
   position: absolute;
   top: 50%;
   left: 20px;
   transform: translateY(-50%);
   background: white;
-  padding: 0 8px;
   color: #999;
-  font-size: 16px;
   transition: all 0.3s ease;
   pointer-events: none;
+  width: calc(100% - 40px);
 }
 
 /* Анимация placeholder вверх */
-.form-group input:focus + label,
-.form-group input:not(:placeholder-shown) + label,
-.form-group select:focus + label,
-.form-group select:not([value=""]):valid + label {
+form .group input:focus + label,
+form .group input:not(:placeholder-shown) + label,
+form .group select:focus + label,
+form .group select:not([value=""]):valid + label {
   top: 0;
-  font-size: 13px;
+  font-size: 80%;
   color: #667eea;
   font-weight: 500;
+  width: auto;
+  padding: 0 3px;  
 }
 
 /* Чекбокс */
@@ -121,33 +155,76 @@ h2 {
 }
 
 /* Кнопка */
-button {
+.button {
+  display: block;
   width: 100%;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
   padding: 16px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #86b5e5 0%, #456f9b 100%);
   color: white;
   border: none;
   border-radius: 12px;
-  font-size: 18px;
+  font-size: 110%;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
 }
-
-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+.button:hover {
+  box-shadow: 0 0 10px 4px rgb(74 112 151 / 65%);
 }
-
-button:active {
+.button:active {
   transform: translateY(-1px);
 }
 
-.load-container {
-	opacity: 100%;
-	transition: all 0.5s ease;	
+.button.dark {    
+	background: linear-gradient(135deg, #c58763 0%, #793b16 100%);
 }
-.hidden {
-	opacity: 0%;
+.button.dark:hover {
+	box-shadow: 0 0 10px 4px rgb(121 59 22 / 65%);
+}
+
+
+.main {
+    background: url(/assets/imgs/background.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.main .container {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.main .header {
+	padding-top: 30px; 
+	font-size: 130%;
+	color: #4f4a48;
+}
+.main .footer {
+	padding-bottom: 40px; 
+}
+
+
+.thanks {
+	background: url(/assets/imgs/tnx-background.webp) no-repeat;
+    background-size: 70vh;
+    background-position: right bottom;
+}
+@media screen and (max-width: 1024px) {
+	.thanks {
+		background-size: contain;
+	}
+}
+
+
+@media screen and (max-width: 480px) {
+	body {
+	  font-size: 90%;
+	}
+	.main .header {
+		padding-top: 10px; 
+		font-size: 110%;
+		color: #4f4a48;
+	}
 }

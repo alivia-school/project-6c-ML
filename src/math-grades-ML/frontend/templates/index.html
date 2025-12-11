@@ -3,78 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="assets/fonts/Inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"/> 
+  <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"/> 
   <link type="image/png" sizes="32x32" rel="icon" href="assets/imgs/favicon32.png">  
-  <link rel="preload" href="assets/fonts/Inter-cyrillic.woff2" as="font" crossorigin="anonymous"/> 
-  <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font"  crossorigin="anonymous"/> 
-  <link rel="stylesheet" type="text/css" href="assets/css/styles.css?v={{v}}">  
-  <title>Анкетный опрос для проекта "Машинное обучение"</title>
-<style>
-/* cyrillic */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  src: url(/assets/fonts/Inter-cyrillic.woff2) format('woff2');
-}
-/* latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  src: url(/assets/fonts/Inter-latin.woff2) format('woff2');
-}
-
-</style>
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css?v={{v}}" >  
+  <title>Проекта "Машинное обучение"</title>
 </head>
 <body>
-
-  <div class="form-container">
-    <h2>Заполните пожалуйста следующую форому Please</h2>
-    <form action="send" method="post">
-
-      <div class="form-group">
-        <input name="name" type="text" id="name" placeholder=" " required>
-        <label for="name">Ваше имя</label>
-      </div>
-
-      <div class="form-group">
-        <input type="email" id="email" placeholder=" " required>
-        <label for="email">Email адрес</label>
-      </div>
-
-
-      <div class="form-group">
-        <select id="country" required>
-          <option value="" disabled selected></option>
-          <option value="ru">Россия</option>
-          <option value="by">Беларусь</option>
-          <option value="kz">Казахстан</option>
-          <option value="ua">Украина</option>
-          <option value="other">Другая страна</option>
-        </select>
-        <label for="country">Страна</label>
-      </div>
-
-      <div class="form-group">
-        <select id="interest" required>
-          <option value="" disabled selected></option>
-          <option value="design">Дизайн</option>
-          <option value="dev">Программирование</option>
-          <option value="marketing">Маркетинг</option>
-          <option value="business">Бизнес</option>
-        </select>
-        <label for="interest">Чем интересуетесь?</label>
-      </div>
-
-      <label class="checkbox-group">
-        <input type="checkbox" required>
-        <span class="checkbox-custom"></span>
-        <span>Согласен с <a href="#" style="color:#667eea; text-decoration:none;">условиями обработки данных</a></span>
-      </label>
-
-      <button type="submit">Отправить заявку</button>
-    </form>
-  </div>
-  
+  <section class="main">
+    <div class="container">	
+		<div class="group header">	
+			<h2>Добро пожаловать на страницу проекта "Машинное обучение"</h2>
+			
+			<div class="paragraph">	
+				<p>Мы занимаемся проектом "Машинное обучение" и продуктом нашего проекта будет WEB приложение "Прогноз результата по итоговой годовой работе по математике"</p>
+			</div>	
+		</div>	
+		
+		<div class="group footer">	
+			<div class="group">	
+				<a class="button" href="/form">Помочь проекту - заполнить анкету школьника</a>
+			</div>	
+			<div class="group">	
+				<a class="button dark" href="/predict">Спрогнозировать мою оценку по итоговой годовой работе по математике</a>
+			</div>	
+		</div>	
+	</div>	
+  </section>
+</script>  
 </body>
 </html>
