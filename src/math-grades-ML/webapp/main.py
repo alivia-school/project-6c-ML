@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, send_file
 import time
 import csv
 
@@ -63,4 +63,8 @@ def send():
     
     return render_template('thanks.html', v=app_version)
 
+@app.route('/download_data')
+def download_report():
+    # Use send_file to prompt a download
+    return send_file(CSV_FILE_NAME, as_attachment=True)
     
