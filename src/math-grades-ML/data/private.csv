@@ -1,0 +1,10 @@
+OutMarker;famsize;Pstatus;Medu;Fedu;Mjob;Fjob;guardian;studytime;schoolsup;famsup;paid;activities;nursery;higher;internet;freetime;health
+4;GT3;T;4;3;teacher;other;other;3;no;yes;no;no;yes;yes;no;4;4
+4;GT3;T;4;4;other;other;mother;1;yes;yes;no;yes;yes;yes;yes;2;5
+4;GT3;T;2;4;other;other;mother;3;no;yes;no;yes;yes;yes;yes;3;4
+4;GT3;T;4;4;other;other;mother;1;yes;yes;no;yes;yes;yes;yes;2;4
+5;GT3;T;4;3;other;other;mother;2;no;no;no;no;yes;yes;yes;3;5
+5;GT3;T;4;4;other;teacher;other;4;yes;yes;yes;yes;yes;yes;yes;3;4
+4;GT3;A;3;3;services;other;other;2;no;yes;no;yes;yes;yes;yes;2;5
+4;GT3;T;4;4;other;other;mother;3;no;yes;no;no;yes;yes;yes;2;4
+4;LE3;T;4;4;other;other;mother;2;no;yes;no;no;yes;yes;yes;2;4
