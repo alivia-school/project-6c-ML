@@ -10,7 +10,7 @@ app = Flask(__name__, static_url_path='/',
                       template_folder='templates')
 
 # Загрузка обученной модели
-model = tf.keras.models.load_model(app.root_path + '/data/model.h5')
+model = tf.keras.models.load_model(app.root_path + '/model/model.h5')
 
 CSV_FILE_NAME = app.root_path + '/data/form_data.csv';
                       
