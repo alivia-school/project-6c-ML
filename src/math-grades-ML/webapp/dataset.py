@@ -1,5 +1,7 @@
+# Подключаем библиотеки
 import pandas as pd
 
+# Описание структуры набора данных и соответствия данных и значений параметров для модели
 dataset_values = {
   'famsize': {'LE3': 0, 'GT3': 1},
   'Pstatus': {'A': 0, 'T': 1},
@@ -21,12 +23,15 @@ dataset_values = {
   'OutMarker':  {'2': 2, '3': 3, '4': 4, '5': 5},
 }
   
-  
+
+# Функция перевода набора данных в параметры для модели   
 def processing(dataset):
     with pd.option_context("future.no_silent_downcasting", True):
         dataset = dataset.replace(dataset_values).astype("float32")
     return dataset
-    
+
+# Функция перевода записи данных в параметры для модели и проверка корректности данных
+# Используется для данных переданных через форму прогноза на сайте
 def processing_row(row):
     new_row = {}
     try:
@@ -37,7 +42,10 @@ def processing_row(row):
         return None
         
     return new_row
+
     
+# Функция проверка корректности данных
+# Например используется для данных переданных через форму сбора данных на сайте
 def check_row(row):   
     try:
         for key, value in row.items():
@@ -46,3 +54,6 @@ def check_row(row):
         return False
         
     return True
+    
+    
+    
